@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="sbt 1" modules="loudam,incidence-api,loudam-incidence-impl,loudam-api,loudam-impl,loudam-stream-api,loudam-stream-impl" />
+  </component>
+</project>
