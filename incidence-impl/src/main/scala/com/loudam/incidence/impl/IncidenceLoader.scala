@@ -9,6 +9,9 @@ import com.lightbend.lagom.scaladsl.persistence.cassandra.CassandraPersistenceCo
 import com.lightbend.lagom.scaladsl.server.{LagomApplication, LagomApplicationContext, LagomApplicationLoader, LagomServer}
 import play.api.libs.ws.ahc.AhcWSComponents
 import com.softwaremill.macwire._
+import router.Routes
+import com.loudam.incidence.eventsourcing._
+import com.loudam.incidence.controller._
 
 class IncidenceLoader extends LagomApplicationLoader{
 
@@ -36,4 +39,17 @@ abstract class IncidenceApplication(context: LagomApplicationContext)
 
   // Register the loudam persistent entity
   persistentEntityRegistry.register(wire[IncidenceEntity])
+
+
+  // lazy val repository: IncidenceRepository = wire[IncidenceRepository]
+
+  // // Register the lagom persistent read side processor persistent entity
+  // readSide.register(wire[IncidenceProcessor])
+
+
+  override lazy val router = new Routes(
+    httpErrorHandler,
+    new ImageUpdateController(controllerComponents),
+    lagomServer.router 
+  )
 }

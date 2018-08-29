@@ -12,19 +12,10 @@
             <option value="$PROJECT_DIR$/incidence-api/project" />
             <option value="$PROJECT_DIR$/incidence-impl" />
             <option value="$PROJECT_DIR$/incidence-impl/project" />
-            <option value="$PROJECT_DIR$/loudam-api" />
-            <option value="$PROJECT_DIR$/loudam-api/project" />
-            <option value="$PROJECT_DIR$/loudam-impl" />
-            <option value="$PROJECT_DIR$/loudam-impl/project" />
-            <option value="$PROJECT_DIR$/loudam-stream-api" />
-            <option value="$PROJECT_DIR$/loudam-stream-api/project" />
-            <option value="$PROJECT_DIR$/loudam-stream-impl" />
-            <option value="$PROJECT_DIR$/loudam-stream-impl/project" />
             <option value="$PROJECT_DIR$/project" />
           </set>
         </option>
-        <option name="sbtVersion" value="1.1.4" />
-        <option name="useSbtShell" value="true" />
+        <option name="sbtVersion" value="1.1.6" />
       </SbtProjectSettings>
     </option>
   </component>
