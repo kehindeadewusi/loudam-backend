@@ -41,10 +41,10 @@ abstract class IncidenceApplication(context: LagomApplicationContext)
   persistentEntityRegistry.register(wire[IncidenceEntity])
 
 
-  lazy val repository: IncidenceRepository = wire[IncidenceRepository]
+  // lazy val repository: IncidenceRepository = wire[IncidenceRepository]
 
-  // Register the lagom persistent read side processor persistent entity
-  readSide.register(wire[IncidenceProcessor])
+  // // Register the lagom persistent read side processor persistent entity
+  // readSide.register(wire[IncidenceProcessor])
 
 
   override lazy val router = new Routes(

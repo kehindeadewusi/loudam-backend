@@ -7,13 +7,14 @@ import akka.Done
 import com.lightbend.lagom.scaladsl.playjson.{JsonSerializer, JsonSerializerRegistry}
 import com.loudam.incidence.api.{IncidenceMessage,Location}
 import scala.collection.immutable.Seq
+import  scala.collection.mutable.MutableList
 
 class IncidenceEntity extends PersistentEntity{
   override type Command = IncidenceCommand[_]
   override type Event = IncidenceEvent
   override type State = Incidence
 
-  override def initialState: Incidence =  Incidence(title="", description="", Location(0,0), tags= List.empty, files= None)
+  override def initialState: Incidence =  Incidence(title="", description="", Location(0,0), tags= MutableList.empty, files= None)
 
   override def behavior: Behavior = {
 
