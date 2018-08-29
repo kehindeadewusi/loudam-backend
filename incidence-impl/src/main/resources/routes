@@ -1,0 +1,2 @@
+POST    /api/incidence/file     com.loudam.incidence.controller.ImageUpdateController.uploadFile()
+->      /               com.lightbend.lagom.scaladsl.server.LagomServiceRouter
